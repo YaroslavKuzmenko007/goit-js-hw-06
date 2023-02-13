@@ -1,10 +1,10 @@
-const nameInput = document.getElementById("name-input");
-const nameOutput = document.getElementById("name-output");
+const textInput = document.getElementById('name-input')
+const output = document.getElementById('name-output')
 
-nameInput.oninput = function () {
-    if (input.value === '') {
-       nameOutput.innerHTML = 'Anonymous';
-    } 
-    nameOutput.innerHTML = input.value;
-    
-}
+textInput.addEventListener('input', event => {
+	output.textContent = event.target.value
+
+	if (event.target.value === '') {
+		output.textContent = 'Anonymous'
+	}
+});
